@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Validator;
 
 class PostController extends Controller
 {
+
     // untuk halaman utama / index
     public function index()
     {
