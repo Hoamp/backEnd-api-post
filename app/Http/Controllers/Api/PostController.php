@@ -32,7 +32,7 @@ class PostController extends Controller
             'success' => true,
             'message' => 'Data post',
             'data' => $post
-        ]);
+        ], 200);
     }
 
     // untuk create post
@@ -100,7 +100,7 @@ class PostController extends Controller
             'description' => $request->description,
             'author' => $request->author,
             'tags' => $request->tags,
-            'update_at' => Carbon::now()
+            'updated_at' => Carbon::now()
         ]);
 
         // jika berhasil
@@ -136,7 +136,7 @@ class PostController extends Controller
         } else {
             // kembalikan pesan gagal
             return response()->json([
-                'success' => true,
+                'success' => false,
                 'message' => 'Post cannot deleted'
             ], 400);
         }
